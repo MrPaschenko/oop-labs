@@ -56,7 +56,6 @@ struct ContentView: View {
           Text("ІП-03").tag("ІП-03")
           Text("ІП-04").tag("ІП-04")
           Text("ІП-05").tag("ІП-05")
-          Text("ІП-06").tag("ІП-06")
         })
       }
 
