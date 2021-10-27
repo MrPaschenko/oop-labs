@@ -155,7 +155,9 @@ struct DrawingView: View {
                 default:
                     let newPoint = value.location
                     if value.translation.width + value.translation.height == 0 {
-                        lines.append(Line(points: [newPoint], color: selectedColor, lineWidth: selectedWidth))
+                        lines.append(Line(points: [newPoint],
+                                          color: selectedColor,
+                                          lineWidth: selectedWidth))
                     } else {
                         let index = lines.count - 1
                         lines[index].points.append(newPoint)
