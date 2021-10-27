@@ -23,7 +23,7 @@ class ObservableArray<T>: ObservableObject {
     }
 }
 
-class Tool: ObservableObject {
+class ToolClass: ObservableObject {
     var color: Color
     var lineWidth: CGFloat
     
@@ -33,7 +33,7 @@ class Tool: ObservableObject {
     }
 }
 
-class Line: Tool {
+class LineClass: ToolClass {
     var points: [CGPoint]
     
     init(points: [CGPoint], color: Color, lineWidth: CGFloat) {
@@ -42,7 +42,7 @@ class Line: Tool {
     }
 }
 
-class Straight: Tool {
+class StraightClass: ToolClass {
     var points: [CGPoint]
     
     init(points: [CGPoint], color: Color, lineWidth: CGFloat) {
@@ -51,7 +51,7 @@ class Straight: Tool {
     }
 }
 
-class Ellipse: Tool {
+class EllipseClass: ToolClass {
     var origin: CGPoint
     var width: CGFloat
     var height: CGFloat
@@ -64,7 +64,7 @@ class Ellipse: Tool {
     }
 }
 
-class Rectangle: Tool {
+class RectangleClass: ToolClass {
     var origin: CGPoint
     var width: CGFloat
     var height: CGFloat
@@ -77,30 +77,30 @@ class Rectangle: Tool {
     }
 }
 
-//struct Line {
-//    var points: [CGPoint]
-//    var color: Color
-//    var lineWidth: CGFloat
-//}
+struct LineStruct {
+    var points: [CGPoint]
+    var color: Color
+    var lineWidth: CGFloat
+}
 
-//struct Straight {
-//    var points: [CGPoint]
-//    var color: Color
-//    var lineWidth: CGFloat
-//}
+struct StraightStruct {
+    var points: [CGPoint]
+    var color: Color
+    var lineWidth: CGFloat
+}
 
-//struct Ellipse {
-//    var origin: CGPoint
-//    var width: CGFloat
-//    var height: CGFloat
-//    var color: Color
-//    var lineWidth: CGFloat
-//}
+struct EllipseStruct {
+    var origin: CGPoint
+    var width: CGFloat
+    var height: CGFloat
+    var color: Color
+    var lineWidth: CGFloat
+}
 
-//struct Rectangle {
-//    var origin: CGPoint
-//    var width: CGFloat
-//    var height: CGFloat
-//    var color: Color
-//    var lineWidth: CGFloat
-//}
+struct RectangleStruct {
+    var origin: CGPoint
+    var width: CGFloat
+    var height: CGFloat
+    var color: Color
+    var lineWidth: CGFloat
+}

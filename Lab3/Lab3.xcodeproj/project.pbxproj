@@ -11,9 +11,10 @@
 		A20FCFC82722D56100FD0D83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20FCFC72722D56100FD0D83 /* ContentView.swift */; };
 		A20FCFCA2722D56300FD0D83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20FCFC92722D56300FD0D83 /* Assets.xcassets */; };
 		A20FCFCD2722D56300FD0D83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20FCFCC2722D56300FD0D83 /* Preview Assets.xcassets */; };
-		A20FCFD42722D59600FD0D83 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20FCFD32722D59600FD0D83 /* DrawingView.swift */; };
+		A20FCFD42722D59600FD0D83 /* DrawingClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20FCFD32722D59600FD0D83 /* DrawingClassView.swift */; };
 		A20FCFD62722D5AD00FD0D83 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20FCFD52722D5AD00FD0D83 /* ExampleView.swift */; };
 		A20FCFD82722D5C200FD0D83 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20FCFD72722D5C200FD0D83 /* Tools.swift */; };
+		A21C513B27298E3B00204558 /* DrawingStructView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C513A27298E3B00204558 /* DrawingStructView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +23,10 @@
 		A20FCFC72722D56100FD0D83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A20FCFC92722D56300FD0D83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A20FCFCC2722D56300FD0D83 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A20FCFD32722D59600FD0D83 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		A20FCFD32722D59600FD0D83 /* DrawingClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingClassView.swift; sourceTree = "<group>"; };
 		A20FCFD52722D5AD00FD0D83 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
 		A20FCFD72722D5C200FD0D83 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		A21C513A27298E3B00204558 /* DrawingStructView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingStructView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +61,8 @@
 			children = (
 				A20FCFC52722D56100FD0D83 /* Lab3App.swift */,
 				A20FCFC72722D56100FD0D83 /* ContentView.swift */,
-				A20FCFD32722D59600FD0D83 /* DrawingView.swift */,
+				A20FCFD32722D59600FD0D83 /* DrawingClassView.swift */,
+				A21C513A27298E3B00204558 /* DrawingStructView.swift */,
 				A20FCFD52722D5AD00FD0D83 /* ExampleView.swift */,
 				A20FCFD72722D5C200FD0D83 /* Tools.swift */,
 				A20FCFC92722D56300FD0D83 /* Assets.xcassets */,
@@ -146,11 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A20FCFD42722D59600FD0D83 /* DrawingView.swift in Sources */,
+				A20FCFD42722D59600FD0D83 /* DrawingClassView.swift in Sources */,
 				A20FCFC82722D56100FD0D83 /* ContentView.swift in Sources */,
 				A20FCFC62722D56100FD0D83 /* Lab3App.swift in Sources */,
 				A20FCFD62722D5AD00FD0D83 /* ExampleView.swift in Sources */,
 				A20FCFD82722D5C200FD0D83 /* Tools.swift in Sources */,
+				A21C513B27298E3B00204558 /* DrawingStructView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
