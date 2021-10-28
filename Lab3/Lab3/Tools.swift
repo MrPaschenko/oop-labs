@@ -4,26 +4,13 @@ import Combine
 
 class ObservableArray<T>: ObservableObject {
     @Published var array:[T] = []
-    var cancellables = [AnyCancellable]()
 
     init(array: [T]) {
         self.array = array
     }
-
-    func observeChildrenChanges<T: ObservableObject>() -> ObservableArray<T> {
-        let array2 = array as! [T]
-        array2.forEach({
-            let c = $0.objectWillChange.sink(receiveValue: { _ in self.objectWillChange.send() })
-
-            // Important: You have to keep the returned value allocated,
-            // otherwise the sink subscription gets cancelled
-            self.cancellables.append(c)
-        })
-        return self as! ObservableArray<T>
-    }
 }
 
-class ToolClass: ObservableObject {
+class Tool: ObservableObject {
     var color: Color
     var lineWidth: CGFloat
     
@@ -33,7 +20,7 @@ class ToolClass: ObservableObject {
     }
 }
 
-class LineClass: ToolClass {
+class Line: Tool {
     var points: [CGPoint]
     
     init(points: [CGPoint], color: Color, lineWidth: CGFloat) {
@@ -42,7 +29,7 @@ class LineClass: ToolClass {
     }
 }
 
-class StraightClass: ToolClass {
+class Straight: Tool {
     var points: [CGPoint]
     
     init(points: [CGPoint], color: Color, lineWidth: CGFloat) {
@@ -51,7 +38,7 @@ class StraightClass: ToolClass {
     }
 }
 
-class EllipseClass: ToolClass {
+class Ellipse: Tool {
     var origin: CGPoint
     var width: CGFloat
     var height: CGFloat
@@ -64,7 +51,7 @@ class EllipseClass: ToolClass {
     }
 }
 
-class RectangleClass: ToolClass {
+class Rectangle: Tool {
     var origin: CGPoint
     var width: CGFloat
     var height: CGFloat
@@ -75,32 +62,4 @@ class RectangleClass: ToolClass {
         self.height = height
         super.init(color: color, lineWidth: lineWidth)
     }
-}
-
-struct LineStruct {
-    var points: [CGPoint]
-    var color: Color
-    var lineWidth: CGFloat
-}
-
-struct StraightStruct {
-    var points: [CGPoint]
-    var color: Color
-    var lineWidth: CGFloat
-}
-
-struct EllipseStruct {
-    var origin: CGPoint
-    var width: CGFloat
-    var height: CGFloat
-    var color: Color
-    var lineWidth: CGFloat
-}
-
-struct RectangleStruct {
-    var origin: CGPoint
-    var width: CGFloat
-    var height: CGFloat
-    var color: Color
-    var lineWidth: CGFloat
 }

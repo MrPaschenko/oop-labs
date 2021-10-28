@@ -4,8 +4,7 @@ import SwiftUI
 struct Lab3App: App {
     var body: some Scene {
         WindowGroup {
-            DrawingClassView()
-//            DrawingStructView()
+            DrawingView()
 //            ContentView()
         }
     }
